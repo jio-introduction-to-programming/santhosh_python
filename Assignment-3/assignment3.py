@@ -44,11 +44,11 @@ while i < 5:
     print(i, end=' ')
     
 #Question6
-numbers = [1, 2, 3, 4, 5]
+num6 = [1, 2, 3, 4, 5]
 total = 0
-for num in numbers:
-    if num % 2 != 0:
-        total += num
+for num6 in numbers:
+    if num6 % 2 != 0:
+        total += num6
 print("Solution6: ",total)
 
 #Question7
