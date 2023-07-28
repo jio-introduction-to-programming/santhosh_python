@@ -1,0 +1,124 @@
+'''1. Modules:
+
+In Python, a module is a single file containing Python definitions, functions, classes, or variables. It acts as a container for organizing related code. Modules allow you to break down a large application into smaller, manageable files, making code easier to maintain and understand.
+
+Creating a Module:
+
+To create a module, you need to write your Python code in a separate file with a .py extension. For example, let's create a module named math_operations.py:
+# math_operations.py
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+Using a Module:
+
+To use the functions defined in the math_operations module, you first need to import it into your Python script. This can be achieved using the import keyword:
+import math_operations
+
+result_add = math_operations.add(5, 3)
+result_subtract = math_operations.subtract(10, 4)
+
+print("Addition:", result_add)  # Output: Addition: 8
+print("Subtraction:", result_subtract)  # Output: Subtraction: 6
+2. Packages:
+
+While modules are useful for organizing code within a single file, packages take the concept further by allowing you to organize modules in directories and subdirectories. A package is a collection of modules that work together to provide a specific functionality or feature set. It helps maintain a hierarchical structure for your code, enhancing readability and reducing naming conflicts.
+
+Creating a Package:
+
+To create a package, you need to organize related modules in a directory and include a special file called __init__.py within that directory. This file can be empty or contain Python code. Let's create a package named geometry:
+geometry/
+    __init__.py
+    shapes.py
+    measurements.py
+# math_operations.py
+
+def add(a, b):
+    """Returns the sum of two numbers."""
+    return a + b
+
+def subtract(a, b):
+    """Returns the difference between two numbers."""
+    return a - b
+
+def multiply(a, b):
+    """Returns the product of two numbers."""
+    return a * b
+
+def divide(a, b):
+    """
+    Returns the division result of two numbers.
+    Raises a ValueError if the second number (b) is zero.
+    """
+    if b == 0:
+        raise ValueError("Cannot divide by zero.")
+    return a / b
+
+# main.py
+import math_operations
+
+# Using the add function
+result_add = math_operations.add(5, 3)
+print("Addition:", result_add)  # Output: Addition: 8
+
+# Using the subtract function
+result_subtract = math_operations.subtract(10, 4)
+print("Subtraction:", result_subtract)  # Output: Subtraction: 6
+
+# Using the multiply function
+result_multiply = math_operations.multiply(6, 7)
+print("Multiplication:", result_multiply)  # Output: Multiplication: 42
+
+# Using the divide function
+try:
+    result_divide = math_operations.divide(10, 2)
+    print("Division:", result_divide)  # Output: Division: 5.0
+except ValueError as e:
+    print("Error:", e)
+
+# Attempting to divide by zero
+try:
+    result_divide_zero = math_operations.divide(7, 0)
+    print("Division:", result_divide_zero)
+except ValueError as e:
+    print("Error:", e)  # Output: Error: Cannot divide by zero.
+In the main.py script, we import the math_operations module using import math_operations. Then, we use the functions from the module to perform basic mathematical operations. The try-except blocks are used to handle potential ValueError exceptions raised when attempting to divide by zero.
+
+To run this code, save both the math_operations.py and main.py files in the same directory and execute main.py. You should see the output demonstrating the usage of the functions from the math_operations module.
+Package: requests
+
+Purpose and Functionality:
+
+The requests library is a popular third-party package for making HTTP requests in Python. It simplifies the process of sending HTTP/1.1 requests and handling responses, making it easy to interact with web APIs and perform various web-related tasks. Whether you need to fetch data from a RESTful API, download files, or submit forms on a website, requests provides a user-friendly interface for all these operations.
+Installation:
+
+To install the requests package, you can use pip, Python's package manager. Open your terminal or command prompt and run the following command:
+
+Package: requests
+
+Purpose and Functionality:
+
+The requests library is a popular third-party package for making HTTP requests in Python. It simplifies the process of sending HTTP/1.1 requests and handling responses, making it easy to interact with web APIs and perform various web-related tasks. Whether you need to fetch data from a RESTful API, download files, or submit forms on a website, requests provides a user-friendly interface for all these operations.
+
+Features of requests:
+
+Simple API: The requests package offers an intuitive and straightforward API, making it easy for developers to send HTTP requests without worrying about low-level implementation details.
+
+HTTP Verbs Support: It supports all common HTTP methods, such as GET, POST, PUT, DELETE, PATCH, and more, allowing you to interact with web services effectively.
+
+Custom Headers and Parameters: You can set custom headers, query parameters, cookies, and authentication credentials in your requests.
+
+Response Handling: The library provides easy access to the response data, headers, and status codes, allowing you to process the server's responses efficiently.
+
+Session Management: It supports sessions, enabling you to persist cookies across multiple requests, which is useful for maintaining user sessions on websites.
+
+Installation:
+
+To install the requests package, you can use pip, Python's package manager. Open your terminal or command prompt and run the following command:
+
+Copy code
+pip install requests
+Usage:
+
+Once you have requests installed, you can start using it in your Python projects. Here's a simple example of how to make a GET request and handle the response:'''
